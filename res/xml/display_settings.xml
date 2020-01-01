@@ -98,6 +98,10 @@
         android:summary="@string/display_white_balance_summary"
         settings:controller="com.android.settings.display.DisplayWhiteBalancePreferenceController" />
 
+     <SwitchPreference
+        android:key="settings_spacer"
+        android:defaultValue="true" />
+
     <Preference
         android:key="font_size"
         android:title="@string/title_font_size"
