@@ -147,6 +147,7 @@ import com.android.settings.wifi.calling.WifiCallingSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.tether.WifiTetherSettings;
+import com.pixel.extension.Extension;
 
 public class SettingsGateway {
 
@@ -283,8 +284,11 @@ public class SettingsGateway {
             BatterySaverScheduleSettings.class.getName(),
             MobileNetworkListFragment.class.getName(),
             GlobalActionsPanelSettings.class.getName(),
-            DarkModeSettingsFragment.class.getName()
-    };
+            DarkModeSettingsFragment.class.getName(),
+ 
+          // Extension additions
+            Extension.class.getName()
+     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
             // Home page
@@ -322,5 +326,7 @@ public class SettingsGateway {
             Settings.MyDeviceInfoActivity.class.getName(),
             Settings.ModuleLicensesActivity.class.getName(),
             UserBackupSettingsActivity.class.getName(),
+            // extension additions
+            Settings.extensionSettingsActivity.class.getName(),
     };
 }

@@ -178,4 +178,7 @@ public class Settings extends SettingsActivity {
     public static class AccountDashboardActivity extends SettingsActivity {}
     public static class SystemDashboardActivity extends SettingsActivity {}
 
+    // extension Additions.
+    public static class extensionSettingsActivity extends SettingsActivity {}
+
 }
