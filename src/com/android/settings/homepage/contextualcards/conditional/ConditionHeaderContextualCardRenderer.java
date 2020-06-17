@@ -58,13 +58,6 @@ public class ConditionHeaderContextualCardRenderer implements ContextualCardRend
         final ConditionHeaderCardHolder view = (ConditionHeaderCardHolder) holder;
         final MetricsFeatureProvider metricsFeatureProvider = FeatureFactory.getFactory(
                 mContext).getMetricsFeatureProvider();
-        view.icons.removeAllViews();
-        headerCard.getConditionalCards().stream().forEach(card -> {
-            final ImageView icon = (ImageView) LayoutInflater.from(mContext).inflate(
-                    R.layout.conditional_card_header_icon, view.icons, false);
-            icon.setImageDrawable(card.getIconDrawable());
-            view.icons.addView(icon);
-        });
         view.itemView.setOnClickListener(v -> {
             metricsFeatureProvider.action(SettingsEnums.PAGE_UNKNOWN,
                     SettingsEnums.ACTION_SETTINGS_CONDITION_EXPAND,
@@ -80,12 +73,10 @@ public class ConditionHeaderContextualCardRenderer implements ContextualCardRend
     }
 
     public static class ConditionHeaderCardHolder extends RecyclerView.ViewHolder {
-        public final LinearLayout icons;
         public final ImageView expandIndicator;
 
         public ConditionHeaderCardHolder(View itemView) {
             super(itemView);
-            icons = itemView.findViewById(R.id.header_icons_container);
             expandIndicator = itemView.findViewById(R.id.expand_indicator);
         }
     }

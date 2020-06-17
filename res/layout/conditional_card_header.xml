@@ -17,32 +17,23 @@
 
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="50dp"
+    android:layout_height="34dp"
     android:contentDescription="@string/condition_expand_show"
     style="@style/ContextualCardStyle">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
         android:paddingTop="@dimen/contextual_condition_header_padding_top"
         android:paddingBottom="@dimen/contextual_condition_header_padding_bottom"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-        <LinearLayout
-            android:id="@+id/header_icons_container"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginStart="@dimen/contextual_condition_header_icons_margin_start"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"/>
+        android:gravity="start">
 
         <ImageView
             android:id="@+id/expand_indicator"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:paddingTop="@dimen/contextual_condition_header_indicator_padding_top"
             android:paddingStart="@dimen/contextual_condition_header_indicator_padding_start"
             android:paddingEnd="@dimen/contextual_condition_header_indicator_padding_end"
